@@ -10,7 +10,7 @@ $(function () {
 		});
 	}); 
 
-	$(window).scroll(function() {
+	function validateScroll(){
 		if($(window).scrollTop() > 100){
 			if($('#navbar').hasClass('custom-nav')){
 				$('#navbar').removeClass('custom-nav');
@@ -22,6 +22,24 @@ $(function () {
 				$('#navbar').addClass('custom-nav');
 			}
 		}
+
+		var $sticky = $('#description-article').offset().top;
+
+		if ($(window).scrollTop() >= $sticky) {
+			if(! $('#principal-image-wrapper').hasClass('sticky')){
+				$('#principal-image-wrapper').addClass('sticky');
+			}
+		} else {
+			if($('#principal-image-wrapper').hasClass('sticky')){
+				$('#principal-image-wrapper').removeClass('sticky');
+			}
+		}
+	}
+
+	$(window).scroll(function() {
+		validateScroll();
 	});
+
+	validateScroll();
 }); 
 

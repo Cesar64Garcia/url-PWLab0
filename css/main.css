@@ -3,6 +3,11 @@
 	padding: 0px;
 }
 
+@font-face {
+    font-family: Orbitrion;
+    src: url(../fonts/Orbitron-Regular.ttf);
+}
+
 html,body{
 	width: 100%;
 	height: 100%;
@@ -98,17 +103,17 @@ html,body{
 	font-weight: bold;
 }
 
-#primary-text .first-layer{
+#primary-text #first-layer{
 	font-size: 40pt;
 	padding-bottom: 15px;
 	border-bottom: 1px solid #fff;
 }
 
-#primary-text .second-layer{
+#primary-text #second-layer{
 	font-size: 15pt;
 }
 
-#primary-text .third-layer{
+#primary-text #third-layer{
 	font-size: 10pt;
 }
 
@@ -225,23 +230,16 @@ html,body{
 	text-align: center;
 }
 
-.title{
+.custom-title{
 	border-bottom: 2px solid rgb(90, 0, 0);
-	border-top: 2px solid rgb(90, 0, 0);
-	padding: 0px 25px;
 	display:inline; 
-	padding-bottom: 5px;
 	font-weight: bold;
+	padding: 0px 25px 7px 25px;
 	color: rgb(90, 0, 0);
 }
 
-.sub-title{
-	border-bottom: 2px solid rgb(90, 0, 0);
-	padding-right: 30px;
-	display:inline; 
-	padding-bottom: 5px;
-	font-weight: bold;
-	color: rgb(90, 0, 0);
+.title{
+	border-top: 2px solid rgb(90, 0, 0);
 }
 
 

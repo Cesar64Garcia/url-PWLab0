@@ -31,3 +31,61 @@ $(function () {
 	validateScroll();
 }); 
 
+
+arrChange = [false,false,false,false];
+function changeStyle(lngOption){
+	switch(lngOption){
+		case 1:{
+			if(arrChange[lngOption-1]){
+				document.body.style.fontFamily = ''
+			} else {
+				document.body.style.fontFamily = 'Orbitrion'
+			}
+			break;
+		}
+		case 2:{
+			var arrElements = document.getElementsByClassName('custom-title');
+			if(arrChange[lngOption-1]){
+				document.body.style.backgroundColor = 'rgb(255,255,255)';
+				document.body.style.color = 'rgb(0,0,0)';
+
+				Array.prototype.forEach.call(arrElements, function(el) {
+					el.style.color = 'rgb(90,0,0)'
+				});
+			} else {
+				document.body.style.backgroundColor = 'rgb(0,0,0)'
+				document.body.style.color = 'rgb(255,255,255)'
+
+				Array.prototype.forEach.call(arrElements, function(el) {
+					el.style.color = 'rgb(255,0,0)'
+				});
+			}
+			break;
+		}
+		case 3:{
+			var arrElements = document.getElementsByClassName('text-layer');
+			if(arrChange[lngOption-1]){
+				document.getElementById('home').style.backgroundImage = 'url(img/principal.jpg)'
+				Array.prototype.forEach.call(arrElements, function(el) {
+					el.classList.remove('text-right');
+					el.classList.add('text-left');
+				});
+
+				document.getElementById('second-layer').innerHTML = 'MY NAME IS BARRY ALLEN AND'
+				document.getElementById('third-layer').innerHTML = 'MAN ALIVE'
+			} else {
+				document.getElementById('home').style.backgroundImage = 'url(img/reverse.jpg)'
+				Array.prototype.forEach.call(arrElements, function(el) {
+					el.classList.remove('text-left');
+					el.classList.add('text-right');
+				});
+				
+				document.getElementById('second-layer').innerHTML = 'MY NAME IS EOBARD TOME AND'
+				document.getElementById('third-layer').innerHTML = 'MAN IN THE TIMELINE'
+			}
+			break;
+		}
+	}
+	arrChange[lngOption-1] = !arrChange[lngOption-1];
+}
+

@@ -85,6 +85,31 @@ function changeStyle(lngOption){
 			}
 			break;
 		}
+		case 4:{
+			var arrElements = document.getElementsByClassName('custom-title');
+			if(arrChange[lngOption-1]){
+				document.body.style.fontSize = '1em';
+
+				Array.prototype.forEach.call(arrElements, function(el) {
+					el.style.fontSize = '2.5em'
+				});
+			} else {
+				document.body.style.fontSize = '1.5em';
+
+				Array.prototype.forEach.call(arrElements, function(el) {
+					el.style.fontSize = '3em'
+				});
+			}
+			break;
+		}
+		case 5:{
+			if(arrChange[lngOption-1]){
+				document.getElementById('navbar').style.backgroundColor = 'rgba(196,0,0,0)'
+			} else {
+				document.getElementById('navbar').style.backgroundColor = 'rgba(196,0,0,1)'
+			}
+			break;
+		}
 	}
 	arrChange[lngOption-1] = !arrChange[lngOption-1];
 }

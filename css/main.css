@@ -104,17 +104,17 @@ html,body{
 }
 
 #primary-text #first-layer{
-	font-size: 40pt;
+	font-size: 4em;
 	padding-bottom: 15px;
 	border-bottom: 1px solid #fff;
 }
 
 #primary-text #second-layer{
-	font-size: 15pt;
+	font-size: 1em;
 }
 
 #primary-text #third-layer{
-	font-size: 10pt;
+	font-size: 1em;
 }
 
 #home a{
